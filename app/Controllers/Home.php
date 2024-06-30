@@ -10,6 +10,14 @@ class Home extends BaseController
     {
         $pengumumanModel = new PengumumanModel();
         $data['pengumuman'] = $pengumumanModel->findAll();
+
+        // Debugging: Periksa apakah data pengumuman berhasil diambil
+        if (empty($data['pengumuman'])) {
+            echo "Tidak ada pengumuman yang ditemukan.";
+            return;
+        }
+
         return view('home', $data);
     }
 }
+

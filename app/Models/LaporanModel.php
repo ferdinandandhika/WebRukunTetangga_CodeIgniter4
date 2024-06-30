@@ -7,5 +7,6 @@ use CodeIgniter\Model;
 class LaporanModel extends Model
 {
     protected $table = 'laporan';
-    protected $allowedFields = ['judul', 'isi', 'tanggal', 'user_id'];
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['judul', 'isi', 'tanggal', 'pelapor', 'created_at'];
 }

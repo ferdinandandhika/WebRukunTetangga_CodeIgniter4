@@ -40,7 +40,13 @@ class Autoload extends AutoloadConfig
      * @var array<string, list<string>|string>
      */
     public $psr4 = [
+        'Config'      => APPPATH . 'Config',
         APP_NAMESPACE => APPPATH,
+        'App'         => APPPATH,
+        'CodeIgniter' => SYSTEMPATH,
+        'App\Controllers' => APPPATH . 'Controllers',
+        'App\Models' => APPPATH . 'Models',
+        'App\Libraries' => APPPATH . 'Libraries',
     ];
 
     /**
