@@ -24,3 +24,4 @@ $routes->get('/warga', 'Dashboard::warga');
 $routes->post('/warga/createLaporan', 'Warga::createLaporan'); // Rute untuk membuat laporan oleh warga
 $routes->get('/dashboard', 'Dashboard::index'); // Default dashboard
 $routes->get('/auth/logout', 'Auth::logout'); // Rute untuk logout
+$routes->get('/authors', 'Author::index');

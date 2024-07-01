@@ -10,18 +10,43 @@
             top: 0;
             left: 0;
             width: 250px;
-            background-color: #f8f9fa;
+            background-color: #343a40;
             padding-top: 20px;
+            color: white;
+        }
+        .sidebar a {
+            color: white; /* Mengubah warna teks menjadi putih */
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            color: #ffc107; /* Warna teks saat hover */
+        }
+        .sidebar .profile img {
+            border: 2px solid #ffc107;
         }
         .content {
             margin-left: 250px;
             padding: 20px;
         }
+        .table-custom {
+            background-color: #f8f9fa; /* Warna latar belakang tabel */
+            border-radius: 10px; /* Membulatkan sudut tabel */
+            overflow: hidden; /* Menghindari konten keluar dari tabel */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+        }
+        .table-custom th, .table-custom td {
+            padding: 15px; /* Menambahkan padding pada sel tabel */
+            text-align: center; /* Menyelaraskan teks ke tengah */
+        }
+        .table-custom th {
+            background-color: #343a40; /* Warna latar belakang header tabel */
+            color: white; /* Warna teks header tabel */
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="text-center">
+        <div class="text-center profile">
             <?php
                 $profile_picture = session()->get('jenis_kelamin') == 'Perempuan' ? 'profileperempuan.png' : 'profile.png';
             ?>
@@ -34,7 +59,7 @@
     <div class="content">
         <div class="container mt-5">
             <h1>Dashboard Warga</h1>
-            <p>Selamat datang, Warga!</p>
+            <p>Selamat datang, <?= session()->get('nama_lengkap') ?></p>
             <h2>Buat Laporan</h2>
             <?php if (session()->getFlashdata('success')): ?>
                 <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>

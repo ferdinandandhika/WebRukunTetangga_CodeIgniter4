@@ -3,6 +3,19 @@
 <head>
     <title>Edit User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('<?= base_url('img/wallpaper.jpg') ?>') no-repeat center center fixed;
+            background-size: cover;
+            padding-top: 56px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
